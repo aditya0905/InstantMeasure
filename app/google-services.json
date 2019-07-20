@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1093585924229",
+    "firebase_url": "https://instant-measure-27f5d.firebaseio.com",
+    "project_id": "instant-measure-27f5d",
+    "storage_bucket": "instant-measure-27f5d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1093585924229:android:c7a4536b8885c266",
+        "android_client_info": {
+          "package_name": "com.example.instantmeasure"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1093585924229-p4v11bcrfcaapbaag76bdiqb850o6rqj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwLFvs_ozwYi0V0YGixDi3UbwmVd8a0GA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1093585924229-p4v11bcrfcaapbaag76bdiqb850o6rqj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

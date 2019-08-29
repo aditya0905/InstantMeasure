@@ -1,4 +1,5 @@
 package com.example.instantmeasure;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -12,7 +13,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 
@@ -22,8 +22,10 @@ public class AcitvitySignup extends AppCompatActivity {
     //Set display name for each user
     ///////////////////////////////////////
         public EditText emailId, passwd;
-        Button btnSignUp;
-        TextView signIn;
+        Button btnSignUp,signIn;
+
+
+
         FirebaseAuth firebaseAuth;
         TextView err;
         @Override
@@ -31,11 +33,11 @@ public class AcitvitySignup extends AppCompatActivity {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_signup);
             firebaseAuth = FirebaseAuth.getInstance();
-            emailId = findViewById(R.id.ETemail);
-            passwd = findViewById(R.id.ETpassword);
-            btnSignUp = findViewById(R.id.btnSignUp);
-            signIn = findViewById(R.id.TVSignIn);
-            err = findViewById(R.id.tv_err2);
+            emailId = findViewById(R.id.loginemail);
+            passwd = findViewById(R.id.loginpswd);
+            btnSignUp = findViewById(R.id.btnlogin);
+            signIn = findViewById(R.id.btnsignup);
+            err = findViewById(R.id.tv_errli);
 
             btnSignUp.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -68,7 +70,10 @@ public class AcitvitySignup extends AppCompatActivity {
 
 
                                 } else {
+
+
                                     startActivity(new Intent(AcitvitySignup.this, Home.class));
+
 
                                 }
                             }
@@ -81,6 +86,7 @@ public class AcitvitySignup extends AppCompatActivity {
             signIn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+
                     Intent I = new Intent(AcitvitySignup.this, ActivityLogin.class);
                     startActivity(I);
                 }

@@ -1,9 +1,8 @@
 package com.example.instantmeasure;
-import android.accounts.Account;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -20,11 +19,17 @@ public class MainActivity extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
+
                 Intent intent=new Intent(MainActivity.this, ActivityLogin.class);
                 startActivity(intent);
+
+                overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
+
                 finish();
             }
-        },3000);
+        },2500);
+
+
 
 
     }

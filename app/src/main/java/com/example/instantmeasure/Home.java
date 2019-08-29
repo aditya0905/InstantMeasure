@@ -2,15 +2,12 @@ package com.example.instantmeasure;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
-import android.util.Log;
 import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.firebase.auth.FirebaseAuth;
 
 public class Home extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
@@ -25,8 +22,8 @@ public class Home extends AppCompatActivity implements BottomNavigationView.OnNa
 
         bottomNavigationView = findViewById(R.id.nav_view);
 
-        bottomNavigationView.setSelectedItemId(R.id.measure);
-        getSupportFragmentManager().beginTransaction().replace(R.id.container,measurefragment).commit();
+        bottomNavigationView.setSelectedItemId(R.id.account);
+        getSupportFragmentManager().beginTransaction().replace(R.id.container1,accountfragment).commit();
 
         bottomNavigationView.setOnNavigationItemSelectedListener(this);
     }
@@ -43,11 +40,11 @@ public class Home extends AppCompatActivity implements BottomNavigationView.OnNa
         {
             case R.id.account:
 
-                getSupportFragmentManager().beginTransaction().setCustomAnimations(R.anim.fade_in,R.anim.fade_out).replace(R.id.container,accountfragment).commit();
+                getSupportFragmentManager().beginTransaction().setCustomAnimations(R.anim.fade_in,R.anim.fade_out).replace(R.id.container1,accountfragment).commit();
                 return true;
 
             case R.id.measure:
-                getSupportFragmentManager().beginTransaction().setCustomAnimations(R.anim.fade_in,R.anim.fade_out).replace(R.id.container,measurefragment).commit();
+                getSupportFragmentManager().beginTransaction().setCustomAnimations(R.anim.fade_in,R.anim.fade_out).replace(R.id.container1,measurefragment).commit();
                 return true;
 
             case R.id.logout:

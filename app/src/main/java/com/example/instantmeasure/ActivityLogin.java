@@ -1,7 +1,6 @@
 package com.example.instantmeasure;
 
 import android.content.Intent;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -14,27 +13,30 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class ActivityLogin extends AppCompatActivity {
     public EditText loginEmailId, logInpasswd;
     Button btnLogIn;
-    TextView signup;
+    Button signup;
     public static FirebaseAuth firebaseAuth;
     private FirebaseAuth.AuthStateListener authStateListener;
     TextView err;
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState)  {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.login_layout);
         firebaseAuth = FirebaseAuth.getInstance();
-        loginEmailId = findViewById(R.id.loginEmail);
-        logInpasswd = findViewById(R.id.loginpaswd);
-        btnLogIn = findViewById(R.id.btnLogIn);
-        signup = findViewById(R.id.TVSignIn);
-        err = findViewById(R.id.tv_err);
+        loginEmailId = findViewById(R.id.loginemail);
+        logInpasswd = findViewById(R.id.loginpswd);
+        btnLogIn = findViewById(R.id.btnlogin);
+        signup = findViewById(R.id.btnsignup);
+        err = findViewById(R.id.tv_errli);
         err.setText("");
         authStateListener = new FirebaseAuth.AuthStateListener() {
             @Override
@@ -63,6 +65,7 @@ public class ActivityLogin extends AppCompatActivity {
         btnLogIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 String userEmail = loginEmailId.getText().toString();
                 String userPaswd = logInpasswd.getText().toString();
                 if (userEmail.isEmpty()) {

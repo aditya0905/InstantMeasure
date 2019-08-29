@@ -4,18 +4,17 @@
     <item
         android:id="@+id/account"
         android:icon="@drawable/account_24dp"
-        android:title="@string/account"
-        />
+        android:title="@string/account" />
 
     <item
         android:id="@+id/measure"
-        android:icon="@drawable/measure_24dp"
+
+        android:icon="@drawable/ic_dashboard_black_24dp"
         android:title="@string/measure" />
 
     <item
         android:id="@+id/logout"
         android:icon="@drawable/logout_24dp"
-        android:title="@string/log_out"
-        />
+        android:title="@string/log_out" />
 
 </menu>
